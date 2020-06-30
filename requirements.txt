@@ -1,0 +1,5 @@
+lxml>=4.5.1
+
+# For country ISO code conversion to numeric
+iso3166>=1.0.1
+
