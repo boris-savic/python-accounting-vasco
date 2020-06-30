@@ -1,7 +1,7 @@
 from lxml import etree
 
-from vasco.builder import build_xml
-from vasco.definitions import construct_vasco_json
+from accounting_vasco.builder import build_xml
+from accounting_vasco.definitions import construct_vasco_json
 
 
 class Transfer:

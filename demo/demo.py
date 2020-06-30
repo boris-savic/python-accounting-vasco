@@ -1,7 +1,7 @@
 from datetime import datetime
 from decimal import Decimal
 
-from vasco.core import Entry, VASCOExport, TaxData, Tax, Partner
+from accounting_vasco.core import Entry, VASCOExport, TaxData, Tax, Partner
 
 export = VASCOExport()
 
