@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='accounting_vasco',
     packages=['accounting_vasco'],
-    version='0.1.0',
+    version='0.1.1',
     description='Generate VASCO KN-21 XML export for accounting software ',
     author='Boris Savic',
     author_email='boris70@gmail.com',

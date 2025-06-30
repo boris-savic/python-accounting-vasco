@@ -22,6 +22,7 @@ entry_1 = Entry(symbol=3,
                 date_document=datetime.now().date(),
                 date_of_service=datetime.now().date(),
                 date_of_entry=datetime.now().date(),
+                date_due=datetime.now().date(),
                 document_description='Daily total 1',
                 account_code='7600',
                 cost_code='1337',
@@ -31,6 +32,7 @@ entry_1 = Entry(symbol=3,
                 debit=None,
                 credit=Decimal('19'),
                 tax_data=tax_data,
+                veza="101",
                 partner=partner)
 
 

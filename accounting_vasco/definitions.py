@@ -18,7 +18,7 @@ def build_entry_json(entry):
     data = {
         '_name': 'Knjizba',
         '_sorting': ['Simbol', 'Dokument', 'Datum_knjizenja', 'Obracunsko_obdobje', 'Datum_dokumenta', 'Opis_dokumenta',
-                     'Konto', 'Partner', 'Sm', 'Sm2', 'Sm3', 'Sm4', 'Debet', 'Kredit', 'Ir'],
+                     'Konto', 'Partner', 'Rok_placila', 'Sm', 'Sm2', 'Sm3', 'Sm4', 'Debet', 'Kredit', 'Ir', 'Veza'],
         'symbol': {
             '_name': 'Simbol',
             '_value': str(entry.symbol)
@@ -55,6 +55,18 @@ def build_entry_json(entry):
             '_value': str(entry.account_code)
         }
     }
+
+    if entry.date_due:
+        data['date_due'] = {
+            '_name': 'Rok_placila',
+            '_value': entry.date_due.isoformat()
+        }
+
+    if entry.veza:
+        data['veza'] = {
+            '_name': 'Veza',
+            '_value': entry.veza
+        }
 
     if entry.credit:
         data['credit'] = {

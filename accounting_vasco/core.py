@@ -78,7 +78,9 @@ class Entry:
                  debit=None,
                  credit=None,
                  tax_data=None,
-                 partner=None):
+                 partner=None,
+                 date_due=None,
+                 veza=None):
         self.symbol = symbol
         self.document_number = document_number
         self.date_document = date_document
@@ -94,6 +96,8 @@ class Entry:
         self.credit = credit
         self.tax_data = tax_data   # Object TaxData
         self.partner = partner
+        self.date_due = date_due
+        self.veza = veza
 
 
 class VASCOExport:
