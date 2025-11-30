@@ -80,9 +80,11 @@ class Entry:
                  tax_data=None,
                  partner=None,
                  date_due=None,
-                 veza=None):
+                 veza=None,
+                 invoice_number=None):
         self.symbol = symbol
         self.document_number = document_number
+        self.invoice_number = invoice_number
         self.date_document = date_document
         self.date_of_service = date_of_service
         self.date_of_entry = date_of_entry

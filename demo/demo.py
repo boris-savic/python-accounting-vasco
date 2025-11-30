@@ -19,6 +19,7 @@ partner = Partner(code='0001',
 
 entry_1 = Entry(symbol=3,
                 document_number='PE1-BL1-1',
+                invoice_number='PE1-BL1-1',
                 date_document=datetime.now().date(),
                 date_of_service=datetime.now().date(),
                 date_of_entry=datetime.now().date(),
