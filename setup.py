@@ -3,12 +3,12 @@ from setuptools import setup, find_packages
 setup(
     name='accounting_vasco',
     packages=['accounting_vasco'],
-    version='0.1.1',
+    version='0.1.2',
     description='Generate VASCO KN-21 XML export for accounting software ',
     author='Boris Savic',
     author_email='boris70@gmail.com',
     url='https://github.com/boris-savic/python-accounting-vasco',
-    download_url='https://github.com/boris-savic/python-accounting-vasco/tarball/0.1.0',
+    download_url='https://github.com/boris-savic/python-accounting-vasco/tarball/0.1.2',
     keywords=['python vasco', 'accounting', 'vasco'],
     classifiers=[],
     install_requires=[
