@@ -62,6 +62,12 @@ class Partner:
         self.country_iso = country_iso
 
 
+class Attachment:
+    def __init__(self, name: str, base64_content: str):
+        self.name = name
+        self.base64_content = base64_content
+
+
 class Entry:
     def __init__(self,
                  symbol,
@@ -100,6 +106,10 @@ class Entry:
         self.partner = partner
         self.date_due = date_due
         self.veza = veza
+        self.attachments = []
+
+    def add_attachment(self, attachment: Attachment):
+        self.attachments.append(attachment)
 
 
 class VASCOExport:

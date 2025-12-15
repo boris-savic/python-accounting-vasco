@@ -18,7 +18,8 @@ def build_entry_json(entry):
     data = {
         '_name': 'Knjizba',
         '_sorting': ['Simbol', 'Dokument', 'Datum_knjizenja', 'Obracunsko_obdobje', 'Datum_dokumenta', 'Opis_dokumenta',
-                     'Konto', 'Partner', 'Rok_placila', 'Sm', 'Sm2', 'Sm3', 'Sm4', 'Debet', 'Kredit', 'Ir', 'Veza', 'Racun'],
+                     'Konto', 'Partner', 'Rok_placila', 'Sm', 'Sm2', 'Sm3', 'Sm4', 'Debet', 'Kredit', 'Ir', 'Veza', 'Priloga',
+                     'Racun',],
         'symbol': {
             '_name': 'Simbol',
             '_value': str(entry.symbol)
@@ -55,6 +56,28 @@ def build_entry_json(entry):
             '_value': str(entry.account_code)
         }
     }
+
+    if len(entry.attachments) > 0:
+        data['attachment'] = {
+            '_name': 'Priloga',
+        }
+
+        for i, attachment in enumerate(entry.attachments):
+            data['attachment'][f'attachment_{i}'] = {
+                '_name': 'Dokument',
+                'document_content': {
+                    '_name': 'Dokument_vsebina',
+                    'document_name': {
+                        '_name': 'Ime_datoteke',
+                        '_value': attachment.name
+                    },
+                    'document_raw': {
+                        '_name': 'RAW',
+                        '_value': attachment.base64_content
+                    }
+                }
+            }
+
 
     if entry.date_due:
         data['date_due'] = {
